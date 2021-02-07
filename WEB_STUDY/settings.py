@@ -33,6 +33,8 @@ ALLOWED_HOSTS = [".run.goorm.io"]
 INSTALLED_APPS = [
     'polls',
     'bookmark',
+    'photo',
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +124,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
+
+# Media
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# LOGIN
+LOGIN_REDIRECT_URL = '/photo'
